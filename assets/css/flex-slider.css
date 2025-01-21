@@ -12,14 +12,12 @@
 /* ====================================================================================================================
  * FONT-FACE
  * ====================================================================================================================*/
-h1 {
-    @font-face {
-     font-family: Raleway;
-     font-size: 2rem;
-     border-bottom: 1px solid $text-color;
-     border-top: 1px solid $text-color;
-     padding: 2rem 0;
-     font-feature-settings: 'lnum' 1;
+@font-face {
+ src: url('../fonts/flexslider-icon.eot');
+ src: url('../fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('../fonts/flexslider-icon.woff') format('woff'), url('../fonts/flexslider-icon.ttf') format('truetype'), url('../fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+ font-weight: normal;
+ font-style: normal;
+   
 }
 /* ====================================================================================================================
  * RESETS
