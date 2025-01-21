@@ -221,7 +221,7 @@ button.main-button {
   border-radius: 25px;
   padding: 10px 25px;
   background-color: #fff;
-  text-transform: uppercase;
+  text-transform: none ;
   color: #5fb759;
   font-weight: 600;
   letter-spacing: 1px;
