@@ -901,6 +901,7 @@ ul.slick-dots {
   letter-spacing: 1px;
   color:#FFF;
   animation:fadeOutRight 1s both;
+  transform: translateY(-20)
 }
 
 .Modern-Slider .item h5 {
