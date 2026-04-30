@@ -7,58 +7,32 @@
   <title>Kevin's E-Portfolio</title>
 
   <style>
-    * {
-      box-sizing: border-box;
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
     }
 
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #fff;
     }
 
-    img, video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    audio {
-      width: 100%;
-    }
-
-    /* HEADER */
     .header-area {
       background: #222;
       padding: 10px 0;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: auto;
-      padding: 0 20px;
-    }
-
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
     }
 
     .logo {
       color: white;
       font-size: 20px;
       text-decoration: none;
-      margin-right: auto;
     }
 
     .nav {
       list-style: none;
       display: flex;
       gap: 15px;
-      margin: 0;
-      padding: 0;
     }
 
     .nav a {
@@ -66,7 +40,6 @@
       text-decoration: none;
     }
 
-    /* BANNER */
     .main-banner {
       position: relative;
     }
@@ -84,42 +57,26 @@
       color: white;
     }
 
-    /* SECTIONS */
     .section {
       padding: 40px 20px;
     }
 
-    /* GRID */
-    .col-lg-4 {
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .col-lg-4, .col-lg-6, .col-md-6 {
       flex: 1;
       min-width: 250px;
     }
 
-    /* PROJECT CARD FIX (IMPORTANT) */
-    .project-card {
-      width: 100%;
-      max-width: 400px;
-      aspect-ratio: 1 / 1;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #eee;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .project-card img,
-    .project-card video {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .project-card audio {
-      width: 90%;
-    }
-
-    /* FEATURES */
     .features-icon img {
       width: 80px;
       margin-bottom: 10px;
@@ -129,21 +86,32 @@
       text-align: center;
     }
 
-    /* FOOTER */
+    #projects img,
+    #projects video {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    .project-video {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
     #contact-us {
       background: #f4f4f4;
       text-align: center;
     }
   </style>
+
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="header-area">
   <div class="container row">
     <a href="#" class="logo">Kevin's E-Portfolio</a>
-
     <ul class="nav">
       <li><a href="#top">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -152,112 +120,170 @@
   </div>
 </header>
 
-<!-- BANNER -->
 <div class="main-banner" id="top">
-  <img src="assets/images/slide-01.jpg" class="banner-img">
+  <img src="assets/images/slide-01.jpg" alt="Banner" class="banner-img">
   <div class="text-content">
     <h3>Welcome to my iCan e-portfolio</h3>
     <h5>2025-2026 School Year</h5>
   </div>
 </div>
 
-<!-- ABOUT -->
 <section class="section" id="about">
-  <div class="container">
-    <h1>About me</h1>
-    <p>
-      I am an iCan student. I enjoy 3D modeling, graphic design, scripting, and creative projects.
-    </p>
+  <div class="container row">
+    <div class="col-lg-6">
+      <h1>About me</h1>
+      <p>
+        I am an iCan student that started the program last year. In iCan we do
+        assignments that require scripting, 3D modeling, graphic design, and
+        many more skills. Of all these skills, I enjoy 3D modeling the most.
+      </p>
+    </div>
   </div>
 </section>
 
-<!-- FEATURES -->
 <section class="section" id="features">
   <div class="container row">
 
     <div class="col-lg-4 features-item">
       <div class="features-icon">
-        <img src="assets/images/features-icon-1.png">
+        <img src="assets/images/features-icon-1.png" alt="">
       </div>
       <h4>3D Modeling</h4>
-      <p>Creating 3D objects and environments.</p>
+      <p>3D modeling is the process of creating objects or environments using 3D shapes.</p>
     </div>
 
     <div class="col-lg-4 features-item">
       <div class="features-icon">
-        <img src="assets/images/features-icon-1.png">
+        <img src="assets/images/features-icon-1.png" alt="">
       </div>
       <h4>Graphic Design</h4>
-      <p>Editing posters, images, and visual effects.</p>
+      <p>Graphic design involves image editing, logo creation, and video effects.</p>
     </div>
 
     <div class="col-lg-4 features-item">
       <div class="features-icon">
-        <img src="assets/images/features-icon-1.png">
+        <img src="assets/images/features-icon-1.png" alt="">
       </div>
       <h4>Scripting</h4>
-      <p>Writing code for games and automation.</p>
+      <p>Scripting is writing code for games, automation, and websites.</p>
     </div>
 
   </div>
 </section>
 
 <!-- PROJECTS -->
+
 <section class="section" id="projects">
   <div class="container">
-
     <h2>My Projects</h2>
 
     <div class="row">
 
-      <!-- IMAGES -->
-      <div class="col-lg-4"><div class="project-card"><img src="assets/images/Isometric Dungeon Kevin-min.png"></div></div>
-      <div class="col-lg-4"><div class="project-card"><img src="assets/images/Color Glow Technique.png"></div></div>
-      <div class="col-lg-4"><div class="project-card"><img src="assets/images/Clash Of Clans Poster Kevin.png"></div></div>
-      <div class="col-lg-4"><div class="project-card"><img src="assets/images/Battle Two.jpg"></div></div>
-      <div class="col-lg-4"><div class="project-card"><img src="assets/images/Battle One 2.jpg"></div></div>
-      <div class="col-lg-4"><div class="project-card"><img src="assets/images/Comic Book.png"></div></div>
-      <div class="col-lg-4"><div class="project-card"><img src="assets/images/Dont Collide.png"></div></div>
-      <div class="col-lg-4"><div class="project-card"><img src="assets/images/Election Poster Kevin-1.png"></div></div>
-      <div class="col-lg-4"><div class="project-card"><img src="assets/images/Movie Title by Kevin (1).png"></div></div>
-      <div class="col-lg-4"><div class="project-card"><img src="assets/images/One ring rendered image Kevin . (2).png"></div></div>
-      <div class="col-lg-4"><div class="project-card"><img src="assets/images/Self model (1).png"></div></div>
-
-      <!-- VIDEOS -->
+      <!-- Isometric Dungeon -->
       <div class="col-lg-4">
-        <div class="project-card">
-          <video controls>
-            <source src="assets/images/Airplane Animation By Kevin.mp4">
-          </video>
-        </div>
+        <a href="assets/images/Isometric Dungeon Kevin-min.png">
+          <img src="assets/images/Isometric Dungeon Kevin-min.png" alt="Isometric Dungeon">
+        </a>
+      </div>
+
+      <!-- ADDED PROJECTS (same area as Isometric Dungeon) -->
+
+      <div class="col-lg-4">
+        <video controls class="project-video" poster="assets/images/Shattered Sails thumbnail (1).png">
+          <source src="assets/images/Shattered Sails.mp4" type="video/mp4">
+        </video>
       </div>
 
       <div class="col-lg-4">
-        <div class="project-card">
-          <video controls>
-            <source src="assets/images/Gerudo Valley Audio visualizer (1) (online-video-cutter.com).mp4">
-          </video>
-        </div>
+        <video controls class="project-video">
+          <source src="assets/images/Fridge Explosion Kevin (1).mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="col-lg-4">
+        <video controls class="project-video" poster="assets/images/Thumbnail Kevin The Night Shift 2.png">
+          <source src="assets/images/Assigment 2 greenfoot.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="col-lg-4">
+        <video controls class="project-video">
+          <source src="assets/images/Greenfoot assigment 1 gameplay.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <!-- ORIGINAL PROJECTS -->
+
+      <div class="col-lg-4">
+        <img src="assets/images/Color Glow Technique.png" alt="">
+      </div>
+
+      <div class="col-lg-4">
+        <img src="assets/images/Clash Of Clans Poster Kevin.png" alt="">
+      </div>
+
+      <div class="col-lg-4">
+        <img src="assets/images/Battle Two.jpg" alt="">
+      </div>
+
+      <div class="col-lg-4">
+        <img src="assets/images/Battle One 2.jpg" alt="">
+      </div>
+
+      <div class="col-lg-4">
+        <img src="assets/images/Comic Book.png" alt="">
+      </div>
+
+      <div class="col-lg-4">
+        <img src="assets/images/Dont Collide.png" alt="">
+      </div>
+
+      <div class="col-lg-4">
+        <img src="assets/images/Election Poster Kevin-1.png" alt="">
+      </div>
+
+      <div class="col-lg-4">
+        <img src="assets/images/Movie Title by Kevin (1).png" alt="">
+      </div>
+
+      <div class="col-lg-4">
+        <img src="assets/images/One ring rendered image Kevin . (2).png" alt="">
+      </div>
+
+      <div class="col-lg-4">
+        <img src="assets/images/Self model (1).png" alt="">
+      </div>
+
+      <!-- VIDEOS -->
+
+      <div class="col-lg-4">
+        <video controls class="project-video">
+          <source src="assets/images/Airplane Animation By Kevin.mp4" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="col-lg-4">
+        <video controls class="project-video">
+          <source src="assets/images/Gerudo Valley Audio visualizer (1) (online-video-cutter.com).mp4" type="video/mp4">
+        </video>
       </div>
 
       <!-- AUDIO -->
+
       <div class="col-lg-4">
-        <div class="project-card">
-          <audio controls>
-            <source src="assets/images/Kevin’s song (1).mp3">
-          </audio>
-        </div>
+        <audio controls>
+          <source src="assets/images/Kevin’s song (1).mp3" type="audio/mpeg">
+        </audio>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <section class="section" id="contact-us">
   <div class="container">
     <h2>
-      Hope you enjoyed my iCan e-portfolio.<br>
+      Hope you enjoyed my iCan e-portfolio.
       Stay tuned for the next iCan Expo next year!
     </h2>
   </div>
