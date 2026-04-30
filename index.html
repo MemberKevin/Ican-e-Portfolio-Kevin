@@ -1,6 +1,5 @@
 
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,8 +7,8 @@
   <title>Kevin's E-Portfolio</title>
 
   <style>
-    /* Global reset for images */
-    img {
+    /* Reset */
+    img, video, audio {
       max-width: 100%;
       height: auto;
       display: block;
@@ -26,16 +25,31 @@
       padding: 10px 0;
     }
 
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
     .logo {
       color: white;
       font-size: 20px;
       text-decoration: none;
+      margin-right: auto;
     }
 
     .nav {
       list-style: none;
       display: flex;
       gap: 15px;
+      margin: 0;
+      padding: 0;
     }
 
     .nav a {
@@ -66,18 +80,7 @@
       padding: 40px 20px;
     }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .col-lg-4, .col-lg-6, .col-md-6 {
+    .col-lg-4 {
       flex: 1;
       min-width: 250px;
     }
@@ -93,7 +96,9 @@
     }
 
     /* Projects */
-    #projects img {
+    #projects img,
+    #projects video,
+    #projects audio {
       width: 100%;
       max-width: 400px;
       border-radius: 10px;
@@ -105,16 +110,15 @@
       text-align: center;
     }
   </style>
-
 </head>
 
 <body>
 
 <!-- Header -->
-
 <header class="header-area">
   <div class="container row">
     <a href="#" class="logo">Kevin's E-Portfolio</a>
+
     <ul class="nav">
       <li><a href="#top">Home</a></li>
       <li><a href="#about">About</a></li>
@@ -123,10 +127,9 @@
   </div>
 </header>
 
-<!-- Main Banner -->
-
+<!-- Banner -->
 <div class="main-banner" id="top">
-  <img src="assets/images/slide-01.jpg" alt="Banner" class="banner-img">
+  <img src="assets/images/slide-01.jpg" class="banner-img" alt="Banner">
   <div class="text-content">
     <h3>Welcome to my iCan e-portfolio</h3>
     <h5>2025-2026 School Year</h5>
@@ -134,151 +137,128 @@
 </div>
 
 <!-- About -->
-
 <section class="section" id="about">
-  <div class="container row">
-    <div class="col-lg-6">
-      <h1>About me</h1>
-      <p>
-        I am an iCan student that started the program last year. In iCan we do
-        assignments that require scripting, 3D modeling, graphic design, and
-        many more skills. Of all these skills, I enjoy 3D modeling the most.
-      </p>
-    </div>
+  <div class="container">
+    <h1>About me</h1>
+    <p>
+      I am an iCan student that started the program last year. In iCan we do
+      assignments that require scripting, 3D modeling, graphic design, and many more skills.
+      Of all these skills, I enjoy 3D modeling the most.
+    </p>
   </div>
 </section>
 
 <!-- Features -->
-
 <section class="section" id="features">
   <div class="container row">
 
-```
-<div class="col-lg-4 features-item">
-  <div class="features-icon">
-    <img src="assets/images/features-icon-1.png" alt="">
-  </div>
-  <h4>3D Modeling</h4>
-  <p>
-    3D modeling is the process of creating objects or environments using
-    3D shapes.
-  </p>
-</div>
+    <div class="col-lg-4 features-item">
+      <div class="features-icon">
+        <img src="assets/images/features-icon-1.png" alt="">
+      </div>
+      <h4>3D Modeling</h4>
+      <p>Creating objects and environments using 3D tools.</p>
+    </div>
 
-<div class="col-lg-4 features-item">
-  <div class="features-icon">
-    <img src="assets/images/features-icon-1.png" alt="">
-  </div>
-  <h4>Graphic Design</h4>
-  <p>
-    Graphic design involves image editing, logo creation, and video effects.
-  </p>
-</div>
+    <div class="col-lg-4 features-item">
+      <div class="features-icon">
+        <img src="assets/images/features-icon-1.png" alt="">
+      </div>
+      <h4>Graphic Design</h4>
+      <p>Image editing, logos, and visual effects.</p>
+    </div>
 
-<div class="col-lg-4 features-item">
-  <div class="features-icon">
-    <img src="assets/images/features-icon-1.png" alt="">
-  </div>
-  <h4>Scripting</h4>
-  <p>
-    Scripting is writing code for games, automation, and websites.
-  </p>
-</div>
-```
+    <div class="col-lg-4 features-item">
+      <div class="features-icon">
+        <img src="assets/images/features-icon-1.png" alt="">
+      </div>
+      <h4>Scripting</h4>
+      <p>Writing code for games, automation, and websites.</p>
+    </div>
 
   </div>
 </section>
 
 <!-- Projects -->
-
 <section class="section" id="projects">
   <div class="container">
-   <section class="section" id="projects">
-  <div class="container">
 
-```
-<h2>My Projects</h2>
+    <h2>My Projects</h2>
 
-<div class="row">
+    <div class="row">
 
-  <!-- Isometric Dungeon -->
-  <div class="col-lg-4">
-    <a href="assets/images/Isometric Dungeon Kevin-min.png">
-      <img src="assets/images/Isometric Dungeon Kevin-min.png" alt="Isometric Dungeon">
-    </a>
-  </div>
+      <div class="col-lg-4">
+        <img src="assets/images/Isometric Dungeon Kevin-min.png">
+      </div>
 
-  <!-- Other Projects -->
-  <div class="col-lg-4">
-    <img src="assets/images/Color Glow Technique.png" alt="">
-  </div>
+      <div class="col-lg-4">
+        <img src="assets/images/Color Glow Technique.png">
+      </div>
 
-  <div class="col-lg-4">
-    <img src="assets/images/Clash Of Clans Poster Kevin.png" alt="">
-  </div>
+      <div class="col-lg-4">
+        <img src="assets/images/Clash Of Clans Poster Kevin.png">
+      </div>
 
-  <div class="col-lg-4">
-    <img src="assets/images/Battle Two.jpg" alt="">
-  </div>
+      <div class="col-lg-4">
+        <img src="assets/images/Battle Two.jpg">
+      </div>
 
-  <div class="col-lg-4">
-    <img src="assets/images/Battle One 2.jpg" alt="">
-  </div>
+      <div class="col-lg-4">
+        <img src="assets/images/Battle One 2.jpg">
+      </div>
 
-  <div class="col-lg-4">
-    <img src="assets/images/Comic Book.png" alt="">
-  </div>
+      <div class="col-lg-4">
+        <img src="assets/images/Comic Book.png">
+      </div>
 
-  <div class="col-lg-4">
-    <img src="assets/images/Dont Collide.png" alt="">
-  </div>
+      <div class="col-lg-4">
+        <img src="assets/images/Dont Collide.png">
+      </div>
 
-  <div class="col-lg-4">
-    <img src="assets/images/Election Poster Kevin-1.png" alt="">
-  </div>
+      <div class="col-lg-4">
+        <img src="assets/images/Election Poster Kevin-1.png">
+      </div>
 
-  <div class="col-lg-4">
-    <img src="assets/images/Movie Title by Kevin (1).png" alt="">
-  </div>
+      <div class="col-lg-4">
+        <img src="assets/images/Movie Title by Kevin (1).png">
+      </div>
 
-  <div class="col-lg-4">
-    <img src="assets/images/One ring rendered image Kevin . (2).png" alt="">
-  </div>
+      <div class="col-lg-4">
+        <img src="assets/images/One ring rendered image Kevin . (2).png">
+      </div>
 
-  <div class="col-lg-4">
-    <img src="assets/images/Self model (1).png" alt="">
-  </div>
+      <div class="col-lg-4">
+        <img src="assets/images/Self model (1).png">
+      </div>
 
-  <!-- Videos -->
-  <div class="col-lg-4">
-    <video controls class="project-video">
-      <source src="assets/images/Airplane Animation By Kevin.mp4" type="video/mp4">
-    </video>
-  </div>
+      <div class="col-lg-4">
+        <video controls class="project-video">
+          <source src="assets/images/Airplane Animation By Kevin.mp4" type="video/mp4">
+        </video>
+      </div>
 
-  <div class="col-lg-4">
-    <video controls class="project-video">
-      <source src="assets/images/Gerudo Valley Audio visualizer (1) (online-video-cutter.com).mp4" type="video/mp4">
-    </video>
-  </div>
+      <div class="col-lg-4">
+        <video controls class="project-video">
+          <source src="assets/images/Gerudo Valley Audio visualizer.mp4" type="video/mp4">
+        </video>
+      </div>
 
-  <!-- Audio -->
-  <div class="col-lg-4">
-    <audio controls>
-      <source src="assets/images/Kevin’s song (1).mp3" type="audio/mpeg">
-    </audio>
-  </div>
+      <div class="col-lg-4">
+        <audio controls>
+          <source src="assets/images/Kevin song.mp3" type="audio/mpeg">
+        </audio>
+      </div>
 
-</div>
-```
+    </div>
 
   </div>
+</section>
+
 <!-- Footer -->
-
 <section class="section" id="contact-us">
   <div class="container">
     <h2>
-      Hope you enjoyed my iCan e-portfolio.
+      Hope you enjoyed my iCan e-portfolio.<br>
       Stay tuned for the next iCan Expo next year!
     </h2>
   </div>
