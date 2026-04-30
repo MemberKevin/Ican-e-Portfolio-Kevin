@@ -1,157 +1,221 @@
 
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin's E-Portfolio</title>
+
+  <style>
+    /* Global reset for images */
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    .header-area {
+      background: #222;
+      padding: 10px 0;
+    }
+
+    .logo {
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+    }
+
+    .nav {
+      list-style: none;
+      display: flex;
+      gap: 15px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* Banner */
+    .main-banner {
+      position: relative;
+    }
+
+    .banner-img {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+    }
+
+    .text-content {
+      position: absolute;
+      top: 30%;
+      left: 10%;
+      color: white;
+    }
+
+    /* Sections */
+    .section {
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .col-lg-4, .col-lg-6, .col-md-6 {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    /* Features */
+    .features-icon img {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
+    .features-item {
+      text-align: center;
+    }
+
+    /* Projects */
+    #projects img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    /* Footer */
+    #contact-us {
+      background: #f4f4f4;
+      text-align: center;
+    }
+  </style>
+
 </head>
 
 <body>
 
 <!-- Header -->
-<header class="header-area header-sticky">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <nav class="main-nav">
-          <a href="index.html" class="logo">Kevin's E-Portfolio</a>
-          <ul class="nav">
-            <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-            <li class="scroll-to-section"><a href="#about">About</a></li>
-            <li class="scroll-to-section"><a href="#projects">Projects</a></li>
-          </ul>
-          <a class="menu-trigger"></a>
-        </nav>
-      </div>
-    </div>
+
+<header class="header-area">
+  <div class="container row">
+    <a href="#" class="logo">Kevin's E-Portfolio</a>
+    <ul class="nav">
+      <li><a href="#top">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
   </div>
 </header>
 
 <!-- Main Banner -->
-<div class="main-banner header-text" id="top">
-  <div class="item">
-    <div class="img-fill">
-      <img src="assets/images/slide-01.jpg" alt="" style="max-height:300px;">
-      <div class="text-content">
-        <h3>Welcome to my iCan e-portfolio</h3>
-        <h5>2025-2026 School Year</h5>
-      </div>
-    </div>
+
+<div class="main-banner" id="top">
+  <img src="assets/images/slide-01.jpg" alt="Banner" class="banner-img">
+  <div class="text-content">
+    <h3>Welcome to my iCan e-portfolio</h3>
+    <h5>2025-2026 School Year</h5>
   </div>
 </div>
 
 <!-- About -->
+
 <section class="section" id="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-xs-12">
-        <div class="left-text-content">
-          <div class="section-heading">
-            <h1>About me</h1>
-            <p>
-              I am an iCan student that started the program last year. In iCan we do
-              assignments that require scripting, 3D modeling, graphic design, and
-              many more skills. Of all these skills, I enjoy 3D modeling the most.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-6 col-md-6 col-xs-12">
-        <div class="right-text-content">
-          <p>
-            <a href="https://templatemo.com/tm-543-breezed" target="_blank" rel="noopener">
-            </a>
-          </p>
-        </div>
-      </div>
+  <div class="container row">
+    <div class="col-lg-6">
+      <h1>About me</h1>
+      <p>
+        I am an iCan student that started the program last year. In iCan we do
+        assignments that require scripting, 3D modeling, graphic design, and
+        many more skills. Of all these skills, I enjoy 3D modeling the most.
+      </p>
     </div>
   </div>
 </section>
 
 <!-- Features -->
+
 <section class="section" id="features">
-  <div class="container">
-    <div class="row">
+  <div class="container row">
 
-      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-        <div class="features-item">
-          <div class="features-icon">
-            <img src="assets/images/features-icon-1.png" alt="">
-          </div>
-          <div class="features-content">
-            <h4>3D Modeling</h4>
-            <p>
-              3D modeling is the process of creating objects or environments using
-              3D shapes. I mainly use Blender, Inventor and sometimes Tinkercad.
-            </p>
-          </div>
-        </div>
-      </div>
+```
+<div class="col-lg-4 features-item">
+  <div class="features-icon">
+    <img src="assets/images/features-icon-1.png" alt="">
+  </div>
+  <h4>3D Modeling</h4>
+  <p>
+    3D modeling is the process of creating objects or environments using
+    3D shapes.
+  </p>
+</div>
 
-      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-        <div class="features-item">
-          <div class="features-icon">
-            <img src="assets/images/features-icon-1.png" alt="">
-          </div>
-          <div class="features-content">
-            <h4>Graphic Design</h4>
-            <p>
-              Graphic design involves image editing, logo creation, and video
-              effects. I use Photoshop, Illustrator, After Effects, Aesprite, and Piskel.
-            </p>
-          </div>
-        </div>
-      </div>
+<div class="col-lg-4 features-item">
+  <div class="features-icon">
+    <img src="assets/images/features-icon-1.png" alt="">
+  </div>
+  <h4>Graphic Design</h4>
+  <p>
+    Graphic design involves image editing, logo creation, and video effects.
+  </p>
+</div>
 
-      <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-        <div class="features-item">
-          <div class="features-icon">
-            <img src="assets/images/features-icon-1.png" alt="">
-          </div>
-          <div class="features-content">
-            <h4>Scripting</h4>
-            <p>
-              Scripting is writing code for games, automation, and websites. I use
-              Thonny, GitHub, Visual Studio Code, Godot and terminal tools.
-            </p>
-          </div>
-        </div>
-      </div>
+<div class="col-lg-4 features-item">
+  <div class="features-icon">
+    <img src="assets/images/features-icon-1.png" alt="">
+  </div>
+  <h4>Scripting</h4>
+  <p>
+    Scripting is writing code for games, automation, and websites.
+  </p>
+</div>
+```
 
-    </div>
   </div>
 </section>
 
 <!-- Projects -->
+
 <section class="section" id="projects">
   <div class="container">
+    <h2>My Projects</h2>
 
-    <div class="section-heading">
-      <h6>My Projects</h6>
-      <h2>Some of my latest projects</h2>
-    </div>
-
-    <div class="row">
-      <div class="col-lg-4 col-md-6">
-        <div class="item">
-          <a href="assets/images/Isometric Dungeon Kevin-min.png" data-lightbox="projects">
-            <img src="assets/images/Isometric Dungeon Kevin-min.png" alt="">
-          </a>
-        </div>
-      </div>
-    </div>
+```
+<div class="row">
+  <div class="col-lg-4">
+    <a href="assets/images/Isometric Dungeon Kevin-min.png">
+      <img src="assets/images/Isometric Dungeon Kevin-min.png" alt="Project">
+    </a>
+  </div>
+</div>
+```
 
   </div>
 </section>
 
 <!-- Footer -->
+
 <section class="section" id="contact-us">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="section-heading">
-          <h2>
-            Hope you enjoyed my iCan e-portfolio.
-            Stay tuned for the next iCan Expo next year!
-          </h2>
-        </div>
-      </div>
-    </div>
+    <h2>
+      Hope you enjoyed my iCan e-portfolio.
+      Stay tuned for the next iCan Expo next year!
+    </h2>
   </div>
 </section>
 
