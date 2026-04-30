@@ -1,121 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kevin's E-Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kevin's E-Portfolio</title>
 
-  <style>
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+<style>
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
 
-    .header-area {
-      background: #222;
-      padding: 10px 0;
-    }
+  .header-area {
+    background: #222;
+    padding: 10px 0;
+  }
 
-    .logo {
-      color: white;
-      font-size: 20px;
-      text-decoration: none;
-    }
+  .logo {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+  }
 
-    .nav {
-      list-style: none;
-      display: flex;
-      gap: 15px;
-    }
+  .nav {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
 
-    .nav a {
-      color: white;
-      text-decoration: none;
-    }
+  .nav a {
+    color: white;
+    text-decoration: none;
+  }
 
-    .main-banner {
-      position: relative;
-    }
+  .main-banner {
+    position: relative;
+  }
 
-    .banner-img {
-      width: 100%;
-      max-height: 300px;
-      object-fit: cover;
-    }
+  .banner-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+  }
 
-    .text-content {
-      position: absolute;
-      top: 30%;
-      left: 10%;
-      color: white;
-    }
+  .text-content {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: white;
+  }
 
-    .section {
-      padding: 40px 20px;
-    }
+  .section {
+    padding: 40px 20px;
+  }
 
-    .container {
-      max-width: 1100px;
-      margin: auto;
-    }
+  .container {
+    max-width: 1100px;
+    margin: auto;
+  }
 
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+  /* FIXED GRID (IMPORTANT) */
+  #projects .row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    align-items: start;
+  }
 
-    .col-lg-4, .col-lg-6, .col-md-6 {
-      flex: 1;
-      min-width: 250px;
-    }
+  #projects .col-lg-4 {
+    width: 100%;
+  }
 
-    .features-icon img {
-      width: 80px;
-      margin-bottom: 10px;
-    }
+  /* UNIFORM PROJECT SIZING */
+  #projects img,
+  #projects video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+  }
 
-    .features-item {
-      text-align: center;
-    }
+  .features-icon img {
+    width: 80px;
+    margin-bottom: 10px;
+  }
 
-    #projects .col-lg-4 {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+  .features-item {
+    text-align: center;
+  }
 
-    #projects img,
-    #projects video {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 10px;
-    }
+  #contact-us {
+    background: #f4f4f4;
+    text-align: center;
+  }
 
-    .project-video {
-      width: 100%;
-      max-width: 400px;
-      border-radius: 10px;
-      background: black;
-    }
-
-    #contact-us {
-      background: #f4f4f4;
-      text-align: center;
-    }
-  </style>
-
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header class="header-area">
   <div class="container row">
     <a href="#" class="logo">Kevin's E-Portfolio</a>
@@ -138,15 +129,13 @@
 
 <!-- ABOUT -->
 <section class="section" id="about">
-  <div class="container row">
-    <div class="col-lg-6">
-      <h1>About me</h1>
-      <p>
-        I am an iCan student that started the program last year. In iCan we do
-        assignments that require scripting, 3D modeling, graphic design, and
-        many more skills. Of all these skills, I enjoy 3D modeling the most.
-      </p>
-    </div>
+  <div class="container">
+    <h1>About me</h1>
+    <p>
+      I am an iCan student that started the program last year. In iCan we do
+      assignments that require scripting, 3D modeling, graphic design, and
+      many more skills. Of all these skills, I enjoy 3D modeling the most.
+    </p>
   </div>
 </section>
 
@@ -154,28 +143,28 @@
 <section class="section" id="features">
   <div class="container row">
 
-    <div class="col-lg-4 features-item">
+    <div class="features-item">
       <div class="features-icon">
         <img src="assets/images/features-icon-1.png">
       </div>
       <h4>3D Modeling</h4>
-      <p>3D modeling is the process of creating objects or environments using 3D shapes.</p>
+      <p>Creating objects and environments using 3D tools.</p>
     </div>
 
-    <div class="col-lg-4 features-item">
+    <div class="features-item">
       <div class="features-icon">
         <img src="assets/images/features-icon-1.png">
       </div>
       <h4>Graphic Design</h4>
-      <p>Graphic design involves image editing, logo creation, and video effects.</p>
+      <p>Editing images, posters, and visual effects.</p>
     </div>
 
-    <div class="col-lg-4 features-item">
+    <div class="features-item">
       <div class="features-icon">
         <img src="assets/images/features-icon-1.png">
       </div>
       <h4>Scripting</h4>
-      <p>Scripting is writing code for games, automation, and websites.</p>
+      <p>Programming games, automation, and websites.</p>
     </div>
 
   </div>
@@ -188,35 +177,35 @@
 
     <div class="row">
 
-      <!-- ISOMETRIC DUNGEON -->
+      <!-- Isometric Dungeon -->
       <div class="col-lg-4">
         <img src="assets/images/Isometric Dungeon Kevin-min.png">
       </div>
 
-      <!-- SHATTERED SAILS -->
+      <!-- Shattered Sails (FIXED) -->
       <div class="col-lg-4">
-        <video controls class="project-video" poster="assets/images/Shattered Sails thumbnail (1).png">
+        <video controls poster="assets/images/Shattered Sails thumbnail (1).png">
           <source src="assets/images/Shattered Sails.mp4" type="video/mp4">
         </video>
       </div>
 
-      <!-- FRIDGE EXPLOSION -->
+      <!-- Fridge Explosion -->
       <div class="col-lg-4">
-        <video controls class="project-video">
+        <video controls>
           <source src="assets/images/Fridge Explosion Kevin (1).mp4" type="video/mp4">
         </video>
       </div>
 
-      <!-- NIGHT SHIFT / ASSIGNMENT 2 -->
+      <!-- Night Shift (FIXED) -->
       <div class="col-lg-4">
-        <video controls class="project-video" poster="assets/images/Thumbnail Kevin The Night Shift 2.png">
+        <video controls poster="assets/images/Thumbnail Kevin The Night Shift 2.png">
           <source src="assets/images/Assigment 2 greenfoot.mp4" type="video/mp4">
         </video>
       </div>
 
-      <!-- GREENFOOT ASSIGNMENT 1 -->
+      <!-- Greenfoot -->
       <div class="col-lg-4">
-        <video controls class="project-video">
+        <video controls>
           <source src="assets/images/Greenfoot assigment 1 gameplay.mp4" type="video/mp4">
         </video>
       </div>
@@ -264,13 +253,13 @@
 
       <!-- VIDEOS -->
       <div class="col-lg-4">
-        <video controls class="project-video">
+        <video controls>
           <source src="assets/images/Airplane Animation By Kevin.mp4" type="video/mp4">
         </video>
       </div>
 
       <div class="col-lg-4">
-        <video controls class="project-video">
+        <video controls>
           <source src="assets/images/Gerudo Valley Audio visualizer (1) (online-video-cutter.com).mp4" type="video/mp4">
         </video>
       </div>
