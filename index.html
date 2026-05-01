@@ -10,6 +10,7 @@
     max-width: 100%;
     height: auto;
     display: block;
+    cursor: pointer;
   }
 
   body {
@@ -69,11 +70,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    align-items: start;
-  }
-
-  #projects .col-lg-4 {
-    width: 100%;
   }
 
   #projects img,
@@ -82,34 +78,65 @@
     aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 10px;
-    display: block;
   }
 
   audio {
     width: 100%;
   }
 
-  .features-icon img {
-    width: 80px;
-    margin-bottom: 10px;
+  /* MODAL */
+  #imageModal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.3s ease;
   }
 
-  .features-item {
-    text-align: center;
+  #imageModal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    transform: scale(0.8);
+    animation: zoomIn 0.3s ease forwards;
+  }
+
+  #closeBtn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+  }
+
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  @keyframes zoomIn {
+    from {transform: scale(0.6);}
+    to {transform: scale(1);}
   }
 
   #contact-us {
     background: #f4f4f4;
     text-align: center;
   }
-
 </style>
 </head>
 
 <body>
 
 <header class="header-area">
-  <div class="container row">
+  <div class="container">
     <a href="#" class="logo">Kevin's E-Portfolio</a>
     <ul class="nav">
       <li><a href="#top">Home</a></li>
@@ -122,7 +149,7 @@
 <div class="main-banner" id="top">
   <img src="assets/images/slide-01.jpg" class="banner-img">
   <div class="text-content">
-    <h3>Welcome to my iCan e-portfolio</h3>
+    <h3>Welcome to my iTEC e-portfolio</h3>
     <h5>2025-2026 School Year</h5>
   </div>
 </div>
@@ -131,9 +158,7 @@
   <div class="container">
     <h1>About me</h1>
     <p>
-      I am an iCan student that started the program last year. In iCan we do
-      assignments that require scripting, 3D modeling, graphic design, and
-      many more skills. Of all these skills, I enjoy 3D modeling the most.
+      I am a iTEC student that started the program two years ago. I enjoy 3D modeling and game design the most.
     </p>
   </div>
 </section>
@@ -144,76 +169,52 @@
 
     <div class="row">
 
-      <!-- Isometric Dungeon -->
-      <div class="col-lg-4">
-        <img src="assets/images/Isometric Dungeon Kevin-min.png">
-      </div>
+      <img src="assets/images/Isometric Dungeon Kevin-min.png" onclick="openModal(this)">
 
-      <!-- Shattered Sails (NOW SEPARATE) -->
-      <div class="col-lg-4">
-        <img src="assets/images/Shattered Sails thumbnail (1).png">
-      </div>
-      <div class="col-lg-4">
-        <video controls>
-          <source src="assets/images/Shattered Sails.mp4" type="video/mp4">
-        </video>
-      </div>
+      <!-- Shattered Sails -->
+      <img src="assets/images/Shattered Sails thumbnail (1).png" onclick="openModal(this)">
+      <video controls>
+        <source src="assets/images/Shattered Sails (online-video-cutter.com)(1)(1).mp4" type="video/mp4">
+      </video>
 
-      <!-- Fridge Explosion -->
-      <div class="col-lg-4">
-        <video controls>
-          <source src="assets/images/Fridge Explosion Kevin (1).mp4" type="video/mp4">
-        </video>
-      </div>
+      <!-- Fridge -->
+      <video controls>
+        <source src="assets/images/Fridge Explosion Kevin (1).mp4">
+      </video>
 
-      <!-- Night Shift (NOW SEPARATE) -->
-      <div class="col-lg-4">
-        <img src="assets/images/Thumbnail Kevin The Night Shift 2.png">
-      </div>
-      <div class="col-lg-4">
-        <video controls>
-          <source src="assets/images/Assigment 2 greenfoot.mp4" type="video/mp4">
-        </video>
-      </div>
+      <!-- Night Shift -->
+      <img src="assets/images/Thumbnail Kevin The Night Shift 2.png" onclick="openModal(this)">
+      <video controls>
+        <source src="assets/images/Assigment 2 greenfoot.mp4">
+      </video>
 
-      <!-- Greenfoot -->
-      <div class="col-lg-4">
-        <video controls>
-          <source src="assets/images/Greenfoot assigment 1 gameplay.mp4" type="video/mp4">
-        </video>
-      </div>
+      <!-- More -->
+      <video controls>
+        <source src="assets/images/Greenfoot assigment 1 gameplay.mp4">
+      </video>
 
-      <!-- IMAGES -->
-      <div class="col-lg-4"><img src="assets/images/Color Glow Technique.png"></div>
-      <div class="col-lg-4"><img src="assets/images/Clash Of Clans Poster Kevin.png"></div>
-      <div class="col-lg-4"><img src="assets/images/Battle Two.jpg"></div>
-      <div class="col-lg-4"><img src="assets/images/Battle One 2.jpg"></div>
-      <div class="col-lg-4"><img src="assets/images/Comic Book.png"></div>
-      <div class="col-lg-4"><img src="assets/images/Dont Collide.png"></div>
-      <div class="col-lg-4"><img src="assets/images/Election Poster Kevin-1.png"></div>
-      <div class="col-lg-4"><img src="assets/images/Movie Title by Kevin (1).png"></div>
-      <div class="col-lg-4"><img src="assets/images/One ring rendered image Kevin . (2).png"></div>
-      <div class="col-lg-4"><img src="assets/images/Self model (1).png"></div>
+      <img src="assets/images/Color Glow Technique.png" onclick="openModal(this)">
+      <img src="assets/images/Clash Of Clans Poster Kevin.png" onclick="openModal(this)">
+      <img src="assets/images/Battle Two.jpg" onclick="openModal(this)">
+      <img src="assets/images/Battle One 2.jpg" onclick="openModal(this)">
+      <img src="assets/images/Comic Book.png" onclick="openModal(this)">
+      <img src="assets/images/Dont Collide.png" onclick="openModal(this)">
+      <img src="assets/images/Election Poster Kevin-1.png" onclick="openModal(this)">
+      <img src="assets/images/Movie Title by Kevin (1).png" onclick="openModal(this)">
+      <img src="assets/images/One ring rendered image Kevin . (2).png" onclick="openModal(this)">
+      <img src="assets/images/Self model (1).png" onclick="openModal(this)">
 
-      <!-- VIDEOS -->
-      <div class="col-lg-4">
-        <video controls>
-          <source src="assets/images/Airplane Animation By Kevin.mp4" type="video/mp4">
-        </video>
-      </div>
+      <video controls>
+        <source src="assets/images/Airplane Animation By Kevin.mp4">
+      </video>
 
-      <div class="col-lg-4">
-        <video controls>
-          <source src="assets/images/Gerudo Valley Audio visualizer (1) (online-video-cutter.com).mp4" type="video/mp4">
-        </video>
-      </div>
+      <video controls>
+        <source src="assets/images/Gerudo Valley Audio visualizer (1) (online-video-cutter.com).mp4">
+      </video>
 
-      <!-- AUDIO -->
-      <div class="col-lg-4">
-        <audio controls>
-          <source src="assets/images/Kevin’s song (1).mp3" type="audio/mpeg">
-        </audio>
-      </div>
+      <audio controls>
+        <source src="assets/images/Kevin’s song (1).mp3">
+      </audio>
 
     </div>
   </div>
@@ -221,12 +222,34 @@
 
 <section class="section" id="contact-us">
   <div class="container">
-    <h2>
-      Hope you enjoyed my iCan e-portfolio.<br>
-      Stay tuned for the next iCan Expo next year!
-    </h2>
+    <h2>Hope you enjoyed my portfolio!</h2>
   </div>
 </section>
 
+<!-- MODAL -->
+<div id="imageModal">
+  <span id="closeBtn" onclick="closeModal()">×</span>
+  <img id="modalImg">
+</div>
+
+<script>
+function openModal(img) {
+  document.getElementById("imageModal").style.display = "flex";
+  document.getElementById("modalImg").src = img.src;
+}
+
+function closeModal() {
+  document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
 </body>
 </html>
+<section class="section" id="contact-us">
+  <div class="container">
+    <h2>
+      Hope you enjoyed my iTEC e-portfolio.<br>
+      Stay tuned for the next iTEC Expo next year!
+    </h2>
+  </div>
+</section>
