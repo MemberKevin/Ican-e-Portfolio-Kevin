@@ -65,7 +65,6 @@
     margin: auto;
   }
 
-  /* FIXED GRID (IMPORTANT) */
   #projects .row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -77,7 +76,6 @@
     width: 100%;
   }
 
-  /* UNIFORM PROJECT SIZING */
   #projects img,
   #projects video {
     width: 100%;
@@ -85,6 +83,10 @@
     object-fit: cover;
     border-radius: 10px;
     display: block;
+  }
+
+  audio {
+    width: 100%;
   }
 
   .features-icon img {
@@ -106,7 +108,6 @@
 
 <body>
 
-<!-- HEADER -->
 <header class="header-area">
   <div class="container row">
     <a href="#" class="logo">Kevin's E-Portfolio</a>
@@ -118,7 +119,6 @@
   </div>
 </header>
 
-<!-- BANNER -->
 <div class="main-banner" id="top">
   <img src="assets/images/slide-01.jpg" class="banner-img">
   <div class="text-content">
@@ -127,7 +127,6 @@
   </div>
 </div>
 
-<!-- ABOUT -->
 <section class="section" id="about">
   <div class="container">
     <h1>About me</h1>
@@ -139,38 +138,6 @@
   </div>
 </section>
 
-<!-- FEATURES -->
-<section class="section" id="features">
-  <div class="container row">
-
-    <div class="features-item">
-      <div class="features-icon">
-        <img src="assets/images/features-icon-1.png">
-      </div>
-      <h4>3D Modeling</h4>
-      <p>Creating objects and environments using 3D tools.</p>
-    </div>
-
-    <div class="features-item">
-      <div class="features-icon">
-        <img src="assets/images/features-icon-1.png">
-      </div>
-      <h4>Graphic Design</h4>
-      <p>Editing images, posters, and visual effects.</p>
-    </div>
-
-    <div class="features-item">
-      <div class="features-icon">
-        <img src="assets/images/features-icon-1.png">
-      </div>
-      <h4>Scripting</h4>
-      <p>Programming games, automation, and websites.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- PROJECTS -->
 <section class="section" id="projects">
   <div class="container">
     <h2>My Projects</h2>
@@ -182,9 +149,12 @@
         <img src="assets/images/Isometric Dungeon Kevin-min.png">
       </div>
 
-      <!-- Shattered Sails (FIXED) -->
+      <!-- Shattered Sails (NOW SEPARATE) -->
       <div class="col-lg-4">
-        <video controls poster="assets/images/Shattered Sails thumbnail (1).png">
+        <img src="assets/images/Shattered Sails thumbnail (1).png">
+      </div>
+      <div class="col-lg-4">
+        <video controls>
           <source src="assets/images/Shattered Sails.mp4" type="video/mp4">
         </video>
       </div>
@@ -196,9 +166,12 @@
         </video>
       </div>
 
-      <!-- Night Shift (FIXED) -->
+      <!-- Night Shift (NOW SEPARATE) -->
       <div class="col-lg-4">
-        <video controls poster="assets/images/Thumbnail Kevin The Night Shift 2.png">
+        <img src="assets/images/Thumbnail Kevin The Night Shift 2.png">
+      </div>
+      <div class="col-lg-4">
+        <video controls>
           <source src="assets/images/Assigment 2 greenfoot.mp4" type="video/mp4">
         </video>
       </div>
@@ -211,45 +184,16 @@
       </div>
 
       <!-- IMAGES -->
-      <div class="col-lg-4">
-        <img src="assets/images/Color Glow Technique.png">
-      </div>
-
-      <div class="col-lg-4">
-        <img src="assets/images/Clash Of Clans Poster Kevin.png">
-      </div>
-
-      <div class="col-lg-4">
-        <img src="assets/images/Battle Two.jpg">
-      </div>
-
-      <div class="col-lg-4">
-        <img src="assets/images/Battle One 2.jpg">
-      </div>
-
-      <div class="col-lg-4">
-        <img src="assets/images/Comic Book.png">
-      </div>
-
-      <div class="col-lg-4">
-        <img src="assets/images/Dont Collide.png">
-      </div>
-
-      <div class="col-lg-4">
-        <img src="assets/images/Election Poster Kevin-1.png">
-      </div>
-
-      <div class="col-lg-4">
-        <img src="assets/images/Movie Title by Kevin (1).png">
-      </div>
-
-      <div class="col-lg-4">
-        <img src="assets/images/One ring rendered image Kevin . (2).png">
-      </div>
-
-      <div class="col-lg-4">
-        <img src="assets/images/Self model (1).png">
-      </div>
+      <div class="col-lg-4"><img src="assets/images/Color Glow Technique.png"></div>
+      <div class="col-lg-4"><img src="assets/images/Clash Of Clans Poster Kevin.png"></div>
+      <div class="col-lg-4"><img src="assets/images/Battle Two.jpg"></div>
+      <div class="col-lg-4"><img src="assets/images/Battle One 2.jpg"></div>
+      <div class="col-lg-4"><img src="assets/images/Comic Book.png"></div>
+      <div class="col-lg-4"><img src="assets/images/Dont Collide.png"></div>
+      <div class="col-lg-4"><img src="assets/images/Election Poster Kevin-1.png"></div>
+      <div class="col-lg-4"><img src="assets/images/Movie Title by Kevin (1).png"></div>
+      <div class="col-lg-4"><img src="assets/images/One ring rendered image Kevin . (2).png"></div>
+      <div class="col-lg-4"><img src="assets/images/Self model (1).png"></div>
 
       <!-- VIDEOS -->
       <div class="col-lg-4">
@@ -275,7 +219,6 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <section class="section" id="contact-us">
   <div class="container">
     <h2>
